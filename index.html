@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Explore</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+
+				<li><a href="#">Home</li>
+				<li><a href="#">About</li>
+				<li><a href="#">contact</li>
+				<li><a href="#">posts</li>
+				<li><a href="#">login</li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<div>
+			
+			<h1>Exploring The Inner Psyche</h1>
+
+		</div>
+		<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://www.apa.org/images/sia-science-training-title_tcm7-165558.jpg" style="width:100%">
+  <div class="text"> Share Your Thoughts And Motivate People With Your Real Time Experiences</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://mserviceterapy.ro/wp-content/uploads/2019/11/psychology-representation-730x330.jpg" style="width:100%">
+  <div class="text">THINK ACT GROW INSPIRE</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://www.cpajournal.com/wp-content/uploads/2019/10/CPA.2019.89.9.036.uf001-730x330.jpg" style="width:100%">
+  <div class="text" style="font-weight: bold;color:black;" >Do Your Psyche Needs Help!!!</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+    </section>
+    <script>
+   var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<h2><center> You Can SignUp Here!!!</center></h2>
+<center>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      Please fill in this form to create an account.
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+</center>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<center>
+<p>"You don't need to change, you just need the support to be understood. Then you can express to other who you truly are- not a version you were trying to be."</p>
+
+</center>
+
+<footer>
+	<p1>copyright &copy;MyBlog 2020.All rights Reserved.</p1>
+	<p1>Made with &hearts; in India</p1>
+</footer>
+
+
+</body>
+</html>
